@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DesafioSoftFocus.Api</name>
+    </assembly>
+    <members>
+        <member name="M:DesafioSoftFocus.Api.Controllers.ComunicacaoPerdaController.GetAll">
+            <remarks>
+            Obtém todos os comunicados
+            </remarks>
+            <returns></returns>        
+        </member>
+        <member name="M:DesafioSoftFocus.Api.Controllers.ComunicacaoPerdaController.Get(System.Int32)">
+            <remarks>
+            Obtém um comunicado por id
+            </remarks>
+            <returns></returns>        
+        </member>
+        <member name="M:DesafioSoftFocus.Api.Controllers.ComunicacaoPerdaController.GetByCpf(System.String)">
+            <remarks>
+            Obtém comunicados por cpf
+            </remarks>
+            <returns></returns>        
+        </member>
+        <member name="M:DesafioSoftFocus.Api.Controllers.ComunicacaoPerdaController.PostComunicacaoPerdaExistente(DesafioSoftFocus.Api.Models.Request.GetComunicacaoPerdaExistenteRequest)">
+            <remarks>
+            Obtém comunicados no raio de 10km, com mesma data e eventos diferentes
+            </remarks>
+            <returns></returns>        
+        </member>
+        <member name="M:DesafioSoftFocus.Api.Controllers.ComunicacaoPerdaController.Post(DesafioSoftFocus.Api.Models.Request.PostComunicacaoPerdaRequest)">
+            <remarks>
+            Inclui um comunicado de perda
+            </remarks>
+            <returns></returns>        
+        </member>
+        <member name="M:DesafioSoftFocus.Api.Controllers.ComunicacaoPerdaController.Put(System.Int32,DesafioSoftFocus.Api.Models.Request.PutComunicacaoPerdaRequest)">
+            <remarks>
+            Atualiza comunicado de perda
+            </remarks>
+            <returns></returns>        
+        </member>
+        <member name="M:DesafioSoftFocus.Api.Controllers.ComunicacaoPerdaController.Delete(System.Int32)">
+            <remarks>
+            Remove comunicado de perda
+            </remarks>
+            <returns></returns>        
+        </member>
+        <member name="M:DesafioSoftFocus.Api.Controllers.EventoController.GetAll">
+            <remarks>
+            Obtém todos os eventos
+            </remarks>
+            <returns></returns>        
+        </member>
+    </members>
+</doc>
