@@ -50,7 +50,7 @@ namespace DesafioSoftFocus.Test
         {
             var model = new ComunicacaoPerda();
 
-            model.Cpf = "99999999999";
+            model.Cpf = "60418526001";
             model.DataColheita = DateTime.Now.Date;
             model.Email = "------";
             model.EventoOcorrido = 1;
