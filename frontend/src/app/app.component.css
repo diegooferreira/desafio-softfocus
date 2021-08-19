@@ -1,0 +1,8 @@
+:host ::ng-deep .operacao-pagina {
+    font-size  : 21px !important;
+    font-weight: 500 !important;
+}
+
+:host ::ng-deep .col {
+    margin-top: 3px !important; 
+}

@@ -1,0 +1,103 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="card">
+        <div class="card-header">
+            <span class="operacao-pagina">Inclusão</span>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col col-md-3">
+                        <label for="txtCpf" class="form-label">CPF</label>
+                        <input type="text" class="form-control" id="txtCpf" placeholder="CPF do produtor"
+                            mask="CPF_CNPJ" maxlength="14" formControlName="cpf"
+                            [ngClass]="{ 'is-invalid': (f.cpf.dirty || f.cpf.touched) && f.cpf.errors }" [validation]="true">
+                        <div *ngIf="(f.cpf.dirty || f.cpf.touched) && f.cpf.errors" class="invalid-feedback">
+                            <div *ngIf="f.cpf.errors.required">Este campo é obrigatório</div>
+                        </div>
+                    </div>
+                    <div class="col col-md-5">
+                        <label for="txtNome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="txtNome" placeholder="Nome do produtor"
+                            formControlName="nome"
+                            [ngClass]="{ 'is-invalid': f.nome.errors && (f.nome.dirty || f.nome.touched) }">
+                        <div *ngIf="f.nome.errors && (f.nome.dirty || f.nome.touched)" class="invalid-feedback">
+                            <div *ngIf="f.nome.errors.required">Este campo é obrigatório</div>
+                        </div>
+                    </div>
+                    <div class="col col-md-4">
+                        <label for="txtEmail" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="txtEmail" placeholder="E-mail do produtor"
+                            formControlName="email" [ngClass]="{ 'is-invalid':  (f.email.dirty || f.email.touched) && f.email.errors }">
+                        <div *ngIf="(f.email.dirty || f.email.touched) && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Este campo é obrigatório</div>
+                            <div *ngIf="f.email.errors.email">O endereço de e-mail deve ser válido</div>
+                        </div>
+                    </div>
+                    <div class="col col-md-3">
+                        <label for="txtDataColheita" class="form-label">Data da colheita</label>
+                        <input type="date" class="form-control" id="txtDataColheita" placeholder="Data da colheita"
+                            formControlName="dataColheita"
+                            [ngClass]="{ 'is-invalid': (f.dataColheita.dirty || f.dataColheita.touched) && f.dataColheita.errors }">
+                        <div *ngIf="(f.dataColheita.dirty || f.dataColheita.touched)  && f.dataColheita.errors" class="invalid-feedback">
+                            <div *ngIf="f.dataColheita.errors.required">Este campo é obrigatório</div>
+                        </div>
+                    </div>
+                    <div class="col col-md-5">
+                        <label for="txtTipoLavoura" class="form-label">Tipo da colheita</label>
+                        <input type="text" class="form-control" id="txtTipoLavoura" placeholder="Tipo de colheita"
+                            formControlName="tipoLavoura"
+                            [ngClass]="{ 'is-invalid': (f.tipoLavoura.dirty || f.tipoLavoura.touched) && f.tipoLavoura.errors }">
+                        <div *ngIf="(f.tipoLavoura.dirty || f.tipoLavoura.touched)  && f.tipoLavoura.errors" class="invalid-feedback">
+                            <div *ngIf="f.tipoLavoura.errors.required">Este campo é obrigatório</div>
+                        </div>
+                    </div>
+                    <div class="col col-md-4">
+                        <label for="cboEvento" class="form-label">Evento</label>
+                        <select class="form-select" aria-label="" formControlName="eventoOcorrido" id='cboEvento'
+                            [ngClass]="{ 'is-invalid': (f.eventoOcorrido.dirty || f.eventoOcorrido.touched) && f.eventoOcorrido.errors }">
+                            <option selected value="">Selecione</option>
+                            <option *ngFor="let evento of eventos" [value]="evento.id">{{evento.descricao}}</option>
+                        </select>
+                        <div *ngIf="(f.eventoOcorrido.dirty || f.eventoOcorrido.touched)  && f.eventoOcorrido.errors" class="invalid-feedback">
+                            <div *ngIf="f.eventoOcorrido.errors.required">Este campo é obrigatório</div>
+                        </div>
+                    </div>
+                    <div class="col col-md-3">
+                        <label for="txtLongitude" class="form-label">Localização - Longitude</label>
+                        <input type="text" class="form-control" id="txtLongitude" placeholder="Longitude"
+                            formControlName="localizacaoLongitude"
+                            [ngClass]="{ 'is-invalid': (f.localizacaoLongitude.dirty || f.localizacaoLongitude.touched) && f.localizacaoLongitude.errors }">
+                        <div *ngIf="(f.localizacaoLongitude.dirty || f.localizacaoLongitude.touched)  && f.localizacaoLongitude.errors" class="invalid-feedback">
+                            <div *ngIf="f.localizacaoLongitude.errors.required">Este campo é obrigatório</div>
+                            <div *ngIf="f.localizacaoLongitude.errors.pattern">Longitude inválida</div>
+                        </div>
+                    </div>
+                    <div class="col col-md-3">
+                        <label for="txtLatitude" class="form-label">Localização - Latitude</label>
+                        <input type="text" class="form-control" id="txtLatitude" placeholder="Latitude"
+                            formControlName="localizacaoLatitude"
+                            [ngClass]="{ 'is-invalid': (f.localizacaoLatitude.dirty || f.localizacaoLatitude.touched) && f.localizacaoLatitude.errors }">
+                        <div *ngIf="(f.localizacaoLatitude.dirty || f.localizacaoLatitude.touched) && f.localizacaoLatitude.errors" class="invalid-feedback">
+                            <div *ngIf="f.localizacaoLatitude.errors.required">Este campo é obrigatório</div>
+                            <div *ngIf="f.localizacaoLatitude.errors.pattern">Latitude inválida</div>
+                        </div>
+                    </div>
+                    <div class="col col-md-3" *ngIf='comunicadoSemelhanteExistente'>
+                        <label for="lblLegendaExistenciaCom" class="form-label">&nbsp;</label>
+                        <button type="button" id="lblLegendaExistenciaCom" class="btn btn-warning" disabled
+                            style="display: block !important;"><i class="fas fa-asterisk"></i> Comunicado semelhante
+                            existente</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer d-flex justify-content-end">
+            <button type="button" id="btnCancelar" class="btn btn-secondary" (click)="cancelar();"><i
+                    class="fas fa-times"></i>
+                Cancelar</button>
+            <button type="submit" id="btnNovoComunicado" [disabled]='form.invalid' class="btn btn-success"
+                style="margin-left: 3px !important;"><i class="fas fa-save"></i>
+                Salvar</button>
+        </div>
+    </div>
+</form>
