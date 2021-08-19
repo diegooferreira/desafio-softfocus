@@ -34,6 +34,24 @@ perda.
 
 ### Backend
 - Abrir a solution (pasta backend) e fazer rebuild para baixar as dependências
+- Ir até o arquivo appsettings.json e criar a propriedade 'Connection', conforme exemplo abaixo, substituindo os parâmetros de acordo com a sua instância do banco de dados: 
+```sh
+Server=[SERVIDOR];port=[PORTA];database=[BANCO DE DADOS];uid=[USUÁRIO];password=[SENHA];SslMode=Preferred
+```
+- O arquivo appsettings.json deve se parecer com o exemplo abaixo:
+```sh
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "Connection": "Server=[SERVIDOR];port=[PORTA];database=[BANCO DE DADOS];uid=[USUÁRIO];password=[SENHA];SslMode=Preferred"
+}
+```
 - Executar o projeto
 - Se não abrir automáticamente, colocar '/swagger' no final da URL para abrir o Swagger
 - Manter o projeto em execução
