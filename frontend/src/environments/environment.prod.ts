@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  baseUrl: "https://api-desafio-softfocus.azurewebsites.net/"
+  baseUrl: ""
 };
 /*
  * For easier debugging in development mode, you can import the following file

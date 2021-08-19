@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: "https://api-desafio-softfocus.azurewebsites.net/"
+  baseUrl: ""
 };
 
 /*
