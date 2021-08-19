@@ -38,11 +38,11 @@ O botão ![image](https://user-images.githubusercontent.com/3593817/130079074-c0
 #### Ações de registro
 Quando algum registro é obtido na listagem, são exibidas junto com ele as ações possíveis para o mesmo. São elas:
 
-![image](https://user-images.githubusercontent.com/3593817/130078751-47046b72-3bb5-44ac-80fe-0736adad6742.png) Edição do registro - Abre a tela de cadastro apresentando todos os dados do registro, permitindo a edição dos dados e gravação dos mesmos.
+![image](https://user-images.githubusercontent.com/3593817/130089415-1858d4c0-db02-4c3c-9a8f-b34799c28105.png) Edição do registro - Abre a tela de cadastro apresentando todos os dados do registro, permitindo a edição dos dados e gravação dos mesmos.
 
-![image](https://user-images.githubusercontent.com/3593817/130078812-fcb6d471-f4c5-4656-9e8d-1c97a0c91118.png) Deleção do registro - Exibe uma mensagem de confirmação que, se confirmada, exclue o registro do banco de dados
+![image](https://user-images.githubusercontent.com/3593817/130089444-1ac83177-eef4-4cff-b3de-c27e0d95de05.png) Deleção do registro - Exibe uma mensagem de confirmação que, se confirmada, exclue o registro do banco de dados
 
-![image](https://user-images.githubusercontent.com/3593817/130079343-dceb5a40-a49c-4b1a-afdb-dd10bdd8a0fc.png) Visualização do registro - Abre a tela de cadastro apresentando todos os dados do registro, porém, com os campos read-only.
+![image](https://user-images.githubusercontent.com/3593817/130089491-577e3f31-d6ae-49dd-829f-ce7f64622f00.png) Visualização do registro - Abre a tela de cadastro apresentando todos os dados do registro, porém, com os campos read-only.
 
 #### Validações
 O botão ![image](https://user-images.githubusercontent.com/3593817/130078396-52a14834-a88b-44fe-a41e-933e4190466b.png) só é habilitado caso o campo CPF possua o tamanho de 11 caracteres. Após habilitado, antes da execução da consulta, o sistema valida se o CPF é válido.
