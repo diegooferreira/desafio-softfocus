@@ -116,7 +116,7 @@ O botão ![image](https://user-images.githubusercontent.com/3593817/130082830-92
 - Executar o arquivo db.sql para criação das tabelas e registros básicos no banco de dados recém criado
 
 ### Backend
-- Abrir a solution, acessando a pasta backend, e fazer rebuild para baixar as dependências
+- Abrir a solution no Visual Studio (executando como administrador), acessando a pasta backend, e fazer rebuild para baixar as dependências
 - Ir até o arquivo appsettings.json e criar a propriedade 'Connection', informando a Connection String para acesso ao banco de dados. 
 - Exemplo de modelo de ConnectionString:
 ```sh
@@ -141,7 +141,7 @@ Server=[SERVIDOR];port=[PORTA];database=[BANCO DE DADOS];uid=[USUÁRIO];password
 - Manter o projeto em execução
 
 ### Frontend
-- Abrir no VS Code o conteúdo da pasta frontend
+- Abrir no VS Code (executando como administrador) o conteúdo da pasta frontend
 - Abrir um terminal e executar o comando abaixo para instalar as dependências
 ```sh
 npm i
