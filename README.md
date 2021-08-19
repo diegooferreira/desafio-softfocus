@@ -20,7 +20,7 @@ perda.
 
 ## Utilização do sistema
 
-## Tela de Listagem
+### Tela de Listagem
 A primeira tela de sistema é a listagem de comunicações de perdas já cadastradas, com opção de filtragem pelo CPF do produtor
 
 #### Imagem - Tela de listagem
@@ -45,9 +45,10 @@ Quando algum registro é obtido na listagem, são exibidas junto com ele as aç�
 ![image](https://user-images.githubusercontent.com/3593817/130089491-577e3f31-d6ae-49dd-829f-ce7f64622f00.png) Visualização do registro - Abre a tela de cadastro apresentando todos os dados do registro, porém, com os campos read-only.
 
 #### Validações
-O botão ![image](https://user-images.githubusercontent.com/3593817/130078396-52a14834-a88b-44fe-a41e-933e4190466b.png) só é habilitado caso o campo CPF possua o tamanho de 11 caracteres. Após habilitado, antes da execução da consulta, o sistema valida se o CPF é válido.
+- O botão ![image](https://user-images.githubusercontent.com/3593817/130078396-52a14834-a88b-44fe-a41e-933e4190466b.png) só é habilitado caso o campo CPF possua o tamanho de 11 caracteres. 
+- O sistema valida se o CPF é válido antes de executar a consulta por CPF.
 
-## Tela de Inclusão
+### Tela de Inclusão
 Tela para inclusão de uma nova comunicação de perda
 
 #### Imagem - Tela de inclusão
@@ -69,7 +70,7 @@ O botão ![image](https://user-images.githubusercontent.com/3593817/130082883-e0
 ![image](https://user-images.githubusercontent.com/3593817/130085525-837a2267-7321-4ff0-b551-33626148c534.png)
 
 
-## Tela de edição
+### Tela de edição
 Tela para edição de uma comunicação de perda existente
 
 #### Imagem - Tela de edição
@@ -90,7 +91,7 @@ O botão ![image](https://user-images.githubusercontent.com/3593817/130082883-e0
 
 ![image](https://user-images.githubusercontent.com/3593817/130085525-837a2267-7321-4ff0-b551-33626148c534.png)
 
-## Tela de visualização
+### Tela de visualização
 Tela para visualização dos dados da comunicação de perda
 
 #### Imagem - Tela de visualização
@@ -115,8 +116,9 @@ O botão ![image](https://user-images.githubusercontent.com/3593817/130082830-92
 - Executar o arquivo db.sql para criação das tabelas e registros básicos no banco de dados recém criado
 
 ### Backend
-- Abrir a solution (pasta backend) e fazer rebuild para baixar as dependências
-- Ir até o arquivo appsettings.json e criar a propriedade 'Connection', conforme exemplo abaixo, substituindo os parâmetros de acordo com a sua instância do banco de dados: 
+- Abrir a solution, acessando a pasta backend, e fazer rebuild para baixar as dependências
+- Ir até o arquivo appsettings.json e criar a propriedade 'Connection', informando a Connection String para acesso ao banco de dados. 
+- Exemplo de modelo de ConnectionString:
 ```sh
 Server=[SERVIDOR];port=[PORTA];database=[BANCO DE DADOS];uid=[USUÁRIO];password=[SENHA];SslMode=Preferred
 ```
@@ -135,7 +137,7 @@ Server=[SERVIDOR];port=[PORTA];database=[BANCO DE DADOS];uid=[USUÁRIO];password
 }
 ```
 - Executar o projeto
-- Se não abrir automáticamente, colocar '/swagger' no final da URL para abrir o Swagger
+- Se não abrir automaticamente, colocar '/swagger' no final da URL para abrir o Swagger
 - Manter o projeto em execução
 
 ### Frontend
@@ -153,7 +155,7 @@ export const environment = {
 ```
 > Nota: Pegar a url sem o /swagger (Exemplo: https://localhost:40339/)
 
-- Para executar o comando abaixo para executar o projeto
+- Executar o comando abaixo para iniciar o projeto
 ```sh
 ng s -o
 ```
